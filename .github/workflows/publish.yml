@@ -8,7 +8,7 @@ permissions:
   packages: write
 
 jobs:
-  build:
+  build_publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,6 +39,7 @@ jobs:
         with:
           context: ./frontend
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: |
             ghcr.io/open-platforms-org/ministack-ui-frontend:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/ministack-ui-frontend:latest
@@ -48,6 +49,7 @@ jobs:
         with:
           context: ./backend
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: |
             ghcr.io/open-platforms-org/ministack-ui-backend:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/ministack-ui-backend:latest
