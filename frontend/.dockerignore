@@ -1,9 +1,9 @@
 node_modules
 dist
+.vscode
+.idea
 .git
+.gitignore
 npm-debug.log
-Dockerfile
-docker-compose.yml
-*.local
-build
-coverage
+.DS_Store
+.env
