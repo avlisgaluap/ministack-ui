@@ -41,7 +41,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/open-platforms-org/ministack-ui-frontend:latest
+            ghcr.io/avlisgaluap/ministack-ui-frontend:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/ministack-ui-frontend:latest
 
       - name: Build and push backend (GHCR + Docker Hub)
@@ -51,5 +51,5 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/open-platforms-org/ministack-ui-backend:latest
+            ghcr.io/avlisgaluap/ministack-ui-backend:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/ministack-ui-backend:latest
