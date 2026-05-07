@@ -107,4 +107,4 @@ cp .env.example .env
 # Subir
 docker-compose up --build
 ```
----
+-------------------------------------------
