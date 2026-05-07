@@ -67,7 +67,7 @@ docker network ls
 ```yaml
 services:
   ministack-ui-backend:
-    image: ghcr.io/open-platforms-org/ministack-ui-backend:latest
+    image: ghcr.io/avlisgaluap/ministack-ui-backend:latest
     environment:
       - MINISTACK_ENDPOINT=http://ministack:4566  # nome do container do MiniStack
       - AWS_REGION=us-east-1
@@ -77,9 +77,9 @@ services:
       - sua-rede  # mesma rede do MiniStack
 
   ministack-ui-frontend:
-    image: ghcr.io/open-platforms-org/ministack-ui-frontend:latest
+    image: ghcr.io/avlisgaluap/ministack-ui-frontend:latest
     ports:
-      - "3030:3000"
+      - "3000:3000"
     depends_on:
       - ministack-ui-backend
     networks:

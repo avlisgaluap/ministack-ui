@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "check-esbuild-image": "sh ./scripts/check-esbuild.sh",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
